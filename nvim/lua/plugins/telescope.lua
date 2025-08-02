@@ -37,19 +37,6 @@ return {
         ["<C-l>"] = "preview_scrolling_right",
       },
     }
-        -- You can customize default settings here
-        -- For example, to adjust the preview window
-        -- preview = {
-        --   patterns = {
-        --     ['.*'] = { 'bat', '--color=always', '--style=numbers' }, -- Use bat for preview if installed
-        --   },
-        -- },
-        -- mappings = {
-        --   i = {
-        --     ['<C-u>'] = actions.preview_scrolling_up,
-        --     ['<C-d>'] = actions.preview_scrolling_down,
-        --   },
-        -- },
       },
       extensions = {
         fzf = {
@@ -62,12 +49,5 @@ return {
     })
 
     -- Optional: Define keymaps for common Telescope pickers
-    vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Find files' })
-    vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Live Grep' })
-    vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Buffers' })
-    vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Help Tags' })
-		vim.keymap.set("n", "<leader>r", "<cmd>Telescope registers<CR>", { desc = "Telescope Registers" })
-
-    vim.keymap.set('n', '<leader>fc', builtin.git_commits, { desc = 'Find files' })
   end,
 }
